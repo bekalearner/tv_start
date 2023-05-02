@@ -1,0 +1,19 @@
+header{
+  background-image: url('./public/imgKiro/bg-top-23_2.jpg');
+}
+.search{
+  width: 100px;
+  height: 30px;
+}
+.grid_kiro{
+  display: grid;
+  grid-template-columns: 1fr 80px 40px 80px 1fr;
+  grid-template-rows: 50px;
+}
+@media screen and (max-width: 670px) {
+  .grid_kiro{
+    display: grid;
+    grid-template-columns: 1fr  40px  1fr;
+    grid-template-rows: 50px;
+  }
+}
