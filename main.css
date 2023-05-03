@@ -1,10 +1,4 @@
-header{
-  background-image: url('./public/imgKiro/bg-top-23_2.jpg');
-}
-.search{
-  width: 100px;
-  height: 30px;
-}
+/*  */
 .grid_kiro{
   display: grid;
   grid-template-columns: 1fr 80px 40px 80px 1fr;
@@ -13,7 +7,16 @@ header{
 @media screen and (max-width: 670px) {
   .grid_kiro{
     display: grid;
-    grid-template-columns: 1fr  40px  1fr;
+    grid-template-columns: 1fr 30px 1fr;
     grid-template-rows: 50px;
   }
 }
+/* .container_2{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto-fill;
+  grid-template-rows: 300px 300px ;
+  gap: 30px 
+}
+.image-card{
+  box-shadow: inset 0px -18px 3px #000
+} */

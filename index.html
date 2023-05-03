@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="./main.css">
 </head>
 <body">
-  <header class="w-full h-auto">
+  <header class="w-full h-auto bg-header_img">
     <!-- NAVIGATION -->
     <div class="navigation  flex justify-between items-center max-w-[1100px] h-[100px] m-auto pt-[30px] lg:px-[10px]">
         <!-- LOGO -->
-        <img class="w-[138px] " src="./public/imgKiro/logo-mainn-ru.png" alt="">
+        <img class="w-[138px] " src="./public/img/logo-mainn-ru.png" alt="">
 
         <!-- NAV -->
         <ul id="navbar-default" class="flex items-center gap-[25px] lg:gap-[10px] lg:text-[14px] lg:mx-[10px] sm:hidden">
@@ -27,7 +27,7 @@
         </ul>
         <div class="w-[20px] h-[20px] bg-blue-600"></div>
         <button class="border-none">
-          <img class="w-8 rounded-[50%]" src="./public/imgKiro/profile.png" alt="">
+          <img class="w-8 rounded-[50%]" src="./public/img/profile.png" alt="">
         </button>
 
         <!-- BURGER MENU -->
@@ -53,40 +53,40 @@
     <div class="max-w-[1100px] h-[50px] m-auto flex justify-between items-center lg:px-[10px] xs:flex-col xs:gap-3">
       <div class="flex gap-[10px]">
         <a href="https://vk.com/tvstartru" target="_blank">
-          <img class="w-8" src="./public/imgKiro/i-soc-vk.png" alt="">
+          <img class="w-8" src="./public/img/i-soc-vk.png" alt="">
         </a>
         <a href="https://rutube.ru/channel/24624806/" target="_blank">
-          <img class="w-8" src="./public/imgKiro/i-soc-rtu.png" alt="">
+          <img class="w-8" src="./public/img/i-soc-rtu.png" alt="">
         </a>
         <a href="https://zen.yandex.ru/id/614d8bb8f0c0c85a05a4c3e4" target="_blank">
-          <img class="w-8" src="./public/imgKiro/i-soc-zen.png" alt="">
+          <img class="w-8" src="./public/img/i-soc-zen.png" alt="">
         </a>
         <a href="https://ok.ru/tvstart" target="_blank">
-          <img class="w-8" src="./public/imgKiro/i-soc-ok.png" alt="">
+          <img class="w-8" src="./public/img/i-soc-ok.png" alt="">
         </a>
         <a href="https://ok.ru/tvstart" target="_blank">
-          <img class="w-8" src="./public/imgKiro/i-soc-tg.png" alt="">
+          <img class="w-8" src="./public/img/i-soc-tg.png" alt="">
         </a>
         <a href="https://www.youtube.com/c/TVSTARTLIVE" target="_blank">
-          <img class="w-8" src="./public/imgKiro/i-soc-yt.png" alt="">
+          <img class="w-8" src="./public/img/i-soc-yt.png" alt="">
         </a>
-        <a href="https://www.tiktok.com/@tvstartru" target="_blank"><img class="w-8" src="./public/imgKiro/i-soc-tt.png" alt=""></a>
+        <a href="https://www.tiktok.com/@tvstartru" target="_blank"><img class="w-8" src="./public/img/i-soc-tt.png" alt=""></a>
       </div>
-      <input class="search" type="text" placeholder="Поиск" name="" id="">
+      <input class="search w-[100px] h-[30px]" type="text" placeholder="Поиск" name="" id="">
     </div>
 
 
     <!-- SSYLKI -->
     <div class="max-w-[1100px] m-auto lg:pl-[10px]">
       <a href="#" target="_blank" class="flex items-center gap-[20px] mt-[20px]">
-        <img class="w-[50px]" src="./public/imgKiro/btn-play-stream-red.png" alt="">
+        <img class="w-[50px]" src="./public/img/play.png" alt="">
         <div class="text-white">
           <p>Смотреть онлайн</p>
           <h3 class="text-3xl">Телеканал «Старт Триумф»</h3>
         </div>
       </a>
       <a href="#" target="_blank" class="flex items-center gap-[20px] mt-[40px]">
-        <img class="w-[50px]" src="./public/imgKiro/btn-play-stream-red.png" alt="">
+        <img class="w-[50px]" src="./public/img/play.png" alt="">
         <div class="text-white">
           <p>Смотреть</p>
           <h3 class="text-3xl">Телеканал «Старт»</h3>
@@ -103,49 +103,292 @@
   </header>
 
 
-  <section class="w-full max-h-[500px] bg-[#ededed7e] lg:px-[10px]">
+  <section class="w-full max-h-[700px] bg-[#ededed7e] lg:px-[10px]">
     <div class="max-w-[1100px] max-h-[800px] m-auto pb-6">
       <h1 class="font-medium pt-[30px] pb-[20px] text-[24px] text-[#333333]">Прямые трансляции</h1>
-      <div class="w-full h-[80px] bg-white flex border border-[#ddd] ">
-        <div class="flex items-center justify-center w-[60px] h-[100%] border-r border-[#ddd] ms:hidden">
-          <img class="w-[30px]" src="./public/imgKiro/sport-volley.png" alt="">
-        </div>
-        <div class="w-full flex">
-          <div class="w-[15%] h-[100%] flex items-center text-[12px] font-normal text-[#666] pl-2 lg:block ms:min-w-[100px]">
-            <p class="lg:mt-[19px]">01.05.2023 / </p>
-            <p> 16:50 MSK</p>
+      <div class="container max-h-[500px] overflow-y-auto">
+        <div class="w-full h-[80px] bg-white flex border border-[#ddd] ">
+          <div class="flex items-center justify-center w-[60px] h-[100%] border-r border-[#ddd] ">
+            <img class="w-[30px]" src="./public/img/sport-volley.png" alt="">
           </div>
-          <div class="block w-full">
-            <div class="grid_kiro w-full flex items-center">
-              <div class="flex items-center justify-end font-[600]">
-                <p>Зенит-Казань</p>
+          <div class="w-full flex ms:block">
+            <div class="w-[15%] h-[100%] flex items-center text-[12px] font-normal text-[#666] pl-2 lg:block ms:w-full ms:h-[28px] ms:flex ms:justify-center">
+              <p class="lg:mt-[19px] ms:mt-0">01.05.2023 / </p>
+              <p > 16:50 MSK</p>
+            </div>
+            <div class="block w-full">
+              <div class="grid_kiro w-full flex items-center">
+                <div class="flex items-center justify-end font-[600]">
+                  <p>Зенит-Казань</p>
+                </div>
+                <div class="flex items-center justify-center ms:hidden">
+                  <img class="w-[40px]" src="./public/img/VC-Sparta.png" alt="">
+                </div>
+                <div class="flex items-center justify-center font-semibold ">
+                  <p>--</p>
+                </div>
+                <div class="flex items-center justify-center ms:hidden">
+                  <img class="w-[40px]" src="./public/img/Zarechie.png" alt="">
+                </div>
+                <div class="flex items-center  font-[600]">
+                  <p>Динамо (Москва)</p>
+                </div>
               </div>
-              <div class="flex items-center justify-center ms:hidden">
-                <img class="w-[40px]" src="./public/imgKiro/VC-Sparta.png" alt="">
-              </div>
-              <div class="flex items-center justify-center font-semibold">
-                <p>--</p>
-              </div>
-              <div class="flex items-center justify-center ms:hidden">
-                <img class="w-[40px]" src="./public/imgKiro/Zarechie.png" alt="">
-              </div>
-              <div class="flex items-center  font-[600]">
-                <p>Динамо (Москва)</p>
+              <div class="w-full  ms:hidden">
+                <p class="text-center text-[0.8em] font-normal text-[#BABABA]">Волейбол. Pari Суперлига. Мужчины</p>
               </div>
             </div>
-            <div class="w-full  ms:hidden">
-              <p class="text-center text-[0.8em] font-normal text-[#BABABA]">Волейбол. Pari Суперлига. Мужчины</p>
-            </div>
           </div>
-        </div>
-        <div class="flex justify-center items-center w-[60px] h-[100%] border-l border-[#ddd]">
-          <img class="w-[30px]" src="./public/imgKiro/btn-play-stream-red.png" alt="">
+          <div class="flex justify-center items-center w-[60px] h-[100%] border-l border-[#ddd]">
+            <img class="w-[30px]" src="./public/img/play.png" alt="">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+
+  <section class="w-[1100px] lg:w-[900px] sx:w-[800px] sm:w-[360px] min-h-[90vh] mx-auto lg:px-[10px]">
+    <h1 class="font-medium pt-[30px] pb-[20px] text-[24px] text-[#333333]">Последние трансляции</h1>
+    <div class="container_2  w-full flex flex-wrap gap-6 ">
+
+
+
+      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
+        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+        <div class="flex absolute bottom-0 left-0">
+          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+            <img class="w-[35px]" src="./public/img/sport-volley.png" alt="">
+          </span>
+          <span class="leading-[15px]">
+            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
+            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
+          </span>
+          <span class="flex items-center justify-center w-[70px] h-[85px]">
+            <img class="w-[35px]" src="./public/img/play.png" alt="">
+          </span>
+        </div>
+      </div>
+
+      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
+        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+        <div class="flex absolute bottom-0 left-0">
+          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+            <img class="w-[35px]" src="./public/img/sport-volley.png" alt="">
+          </span>
+          <span class="leading-[15px]">
+            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
+            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
+          </span>
+          <span class="flex items-center justify-center w-[70px] h-[85px]">
+            <img class="w-[35px]" src="./public/img/play.png" alt="">
+          </span>
+        </div>
+      </div>
+
+      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
+        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+        <div class="flex absolute bottom-0 left-0">
+          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+            <img class="w-[35px]" src="./public/img/sport-volley.png" alt="">
+          </span>
+          <span class="leading-[15px]">
+            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
+            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
+          </span>
+          <span class="flex items-center justify-center w-[70px] h-[85px]">
+            <img class="w-[35px]" src="./public/img/play.png" alt="">
+          </span>
+        </div>
+      </div>
+
+      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
+        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+        <div class="flex absolute bottom-0 left-0">
+          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+            <img class="w-[35px]" src="./public/img/sport-volley.png" alt="">
+          </span>
+          <span class="leading-[15px]">
+            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
+            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
+          </span>
+          <span class="flex items-center justify-center w-[70px] h-[85px]">
+            <img class="w-[35px]" src="./public/img/play.png" alt="">
+          </span>
+        </div>
+      </div>
+
+      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
+        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+        <div class="flex absolute bottom-0 left-0">
+          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+            <img class="w-[35px]" src="./public/img/sport-volley.png" alt="">
+          </span>
+          <span class="leading-[15px]">
+            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
+            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
+          </span>
+          <span class="flex items-center justify-center w-[70px] h-[85px]">
+            <img class="w-[35px]" src="./public/img/play.png" alt="">
+          </span>
+        </div>
+      </div>
+
+      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
+        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+        <div class="flex absolute bottom-0 left-0">
+          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+            <img class="w-[35px]" src="./public/img/sport-volley.png" alt="">
+          </span>
+          <span class="leading-[15px]">
+            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
+            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
+          </span>
+          <span class="flex items-center justify-center w-[70px] h-[85px]">
+            <img class="w-[35px]" src="./public/img/play.png" alt="">
+          </span>
+        </div>
+      </div>
+
+      <a class="m-auto my-8" href="#">
+        <button class="uppercase px-[25px] py-[10px] border border-[#bababa] rounded text-[11px]">смотреть больше</button>
+      </a>
+
+    </div>
+  </section>
+
+  <hr class="w-full mb-7">
+
+
+  <section class="w-[1100px] lg:w-[900px] sx:w-[800px] sm:w-[360px] min-h-[90vh] mx-auto lg:px-[10px]">
+      <a class="hover:underline text-[#337ab7]" href="#">
+        <h1 class=" font-medium pt-[10px] pb-[20px] text-[24px] ">Нарды. СТАРТ Суперлига Сайт турнира</h1>
+      </a>
+
+      <div class="container_2  w-full flex flex-wrap gap-6 ">
+
+        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
+          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+          <div class="flex absolute bottom-0 left-0">
+            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+              <img class="w-[35px]" src="./public/img/kub.png" alt="">
+            </span>
+            <span class="leading-[15px]">
+              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
+              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
+            </span>
+            <span class="flex items-center justify-center w-[70px] h-[85px]">
+              <img class="w-[35px]" src="./public/img/play.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
+          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+          <div class="flex absolute bottom-0 left-0">
+            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+              <img class="w-[35px]" src="./public/img/kub.png" alt="">
+            </span>
+            <span class="leading-[15px]">
+              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
+              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
+            </span>
+            <span class="flex items-center justify-center w-[70px] h-[85px]">
+              <img class="w-[35px]" src="./public/img/play.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
+          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+          <div class="flex absolute bottom-0 left-0">
+            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+              <img class="w-[35px]" src="./public/img/kub.png" alt="">
+            </span>
+            <span class="leading-[15px]">
+              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
+              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
+            </span>
+            <span class="flex items-center justify-center w-[70px] h-[85px]">
+              <img class="w-[35px]" src="./public/img/play.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
+          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+          <div class="flex absolute bottom-0 left-0">
+            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+              <img class="w-[35px]" src="./public/img/kub.png" alt="">
+            </span>
+            <span class="leading-[15px]">
+              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
+              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
+            </span>
+            <span class="flex items-center justify-center w-[70px] h-[85px]">
+              <img class="w-[35px]" src="./public/img/play.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
+          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+          <div class="flex absolute bottom-0 left-0">
+            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+              <img class="w-[35px]" src="./public/img/kub.png" alt="">
+            </span>
+            <span class="leading-[15px]">
+              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
+              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
+            </span>
+            <span class="flex items-center justify-center w-[70px] h-[85px]">
+              <img class="w-[35px]" src="./public/img/play.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
+          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
+          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
+          <div class="flex absolute bottom-0 left-0">
+            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
+              <img class="w-[35px]" src="./public/img/kub.png" alt="">
+            </span>
+            <span class="leading-[15px]">
+              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
+              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
+            </span>
+            <span class="flex items-center justify-center w-[70px] h-[85px]">
+              <img class="w-[35px]" src="./public/img/play.png" alt="">
+            </span>
+          </div>
+        </div>
+        <a class="m-auto my-8" href="#">
+          <button class="uppercase px-[25px] py-[10px] border border-[#bababa] rounded text-[11px]">смотреть больше</button>
+        </a>
+
+        </div>
+  </section>
+
+  
+  <hr class="w-full mb-7">
+
+
+  <section class="w-[1100px] lg:w-[900px] sx:w-[800px] sm:w-[360px] min-h-[90vh] mx-auto lg:px-[10px]">
+    <a class="hover:underline text-[#337ab7]" href="#">
+      <h1 class=" font-medium pt-[10px] pb-[20px] text-[24px] ">Нарды. СТАРТ Суперлига Сайт турнира</h1>
+    </a>
+
+    <h2 class="text-2xl my-[30px] font-semibold">Программа Телеканала «СТАРТ»</h2>
+  </section>
+
+
   <script src="./script.js"></script>
 </body>
 </html>
-<input type="color" name="" id="">

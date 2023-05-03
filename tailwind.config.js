@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        header_img: "url('public/imgKiro/logo-mainn-ru.png')"
+        'header_img': "url('/public/img/bg-top-23_2.jpg')"
       }
     },
     screens: {
