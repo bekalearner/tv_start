@@ -45,11 +45,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
 
-    'title',
-    'users_app',
-    'profiles_app',
-    'feedback',
-    'sport_matches',
+    'title.apps.TitleConfig',
+    'users_app.apps.UsersAppConfig',
+    'profiles_app.apps.ProfilesAppConfig',
+    'feedback.apps.FeedbackConfig',
+    'sport_matches.apps.SportMatchesConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -149,10 +149,12 @@ AUTHENTICATION_BACKENDS = ('users_app.backends.AuthBackend',)
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
-    )
+    ),
 }
 
 SIMPLE_JWT = {
@@ -173,4 +175,4 @@ EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+#EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')

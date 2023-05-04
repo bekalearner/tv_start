@@ -8,3 +8,7 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'Форма обратной связи'
+        verbose_name_plural = 'Формы обратной связи'

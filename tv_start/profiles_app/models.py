@@ -11,3 +11,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.name} {self.surname} {self.user.username}"
+
+    class Meta:
+        verbose_name = 'Профиль'
+        verbose_name_plural = 'Профили'

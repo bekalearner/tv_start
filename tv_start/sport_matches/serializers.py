@@ -3,10 +3,9 @@ from sport_matches.models import *
 
 
 class TeamSerializator(serializers.ModelSerializer):
-
     class Meta:
         model = Team
-        fields = ('name', 'logo')
+        fields = '__all__'
 
 
 class SportTypeSerializer(serializers.ModelSerializer):
@@ -28,8 +27,14 @@ class MatchSerializer(serializers.ModelSerializer):
     tournament = TournamentSerializer()
     team_one = TeamSerializator()
     team_two = TeamSerializator()
-    date = serializers.DateField(format='%Y.%m.%d')
+    date = serializers.DateField(format='%Y.%m.%d', default=None)
     time = serializers.TimeField(format='%H:%M')
+    def create(self, validated_data):
+        # Если дата не указана в запросе, то устанавливаем ее по умолчанию
+        if validated_data.get('date') is None:
+            validated_data['date'] = self.instance.date
+        return super().create(validated_data)
+
 
     class Meta:
         model = Match

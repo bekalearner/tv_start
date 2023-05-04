@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from feedback.views import FeedbackView
-from sport_matches.views import MatchViewSet, MatchList
+from sport_matches.views import *
 from title.views import *
 
 #
@@ -41,4 +41,6 @@ urlpatterns = [
 
     path('api/v1/matches/', include(router2.urls)),
     path('api/v1/matches/list/', MatchList.as_view()),
+
+    path('api/v1/auth/', include('rest_framework.urls')),
 ]
