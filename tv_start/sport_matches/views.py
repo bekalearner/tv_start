@@ -8,7 +8,7 @@ from sport_matches.filters import MatchFilter
 from sport_matches.models import *
 from sport_matches.serializers import *
 from .permissions import IsEditor
-
+from rest_framework.response import Response
 class SportTypeViewSet(viewsets.ModelViewSet):
     queryset = SportType.objects.all()
     serializer_class = SportTypeSerializer
@@ -18,10 +18,12 @@ class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
     permission_classes = (IsEditor, )
+    filter_backends = (DjangoFilterBackend,)
+    filterset_class = MatchFilter
 
 class MatchList(generics.ListAPIView):
     queryset = Match.objects.all()
-    serializer_class = MatchSerializer
+    serializer_class = MatchViewSerializer
     filter_backends = (DjangoFilterBackend,)
     filterset_class = MatchFilter
     def perform_create(self, serializer):

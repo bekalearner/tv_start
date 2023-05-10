@@ -9,33 +9,41 @@ class TeamSerializator(serializers.ModelSerializer):
 
 
 class SportTypeSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = SportType
         fields = '__all__'
 
 
+
 class TournamentSerializer(serializers.ModelSerializer):
-    gender = serializers.CharField(source='get_gender_display')
     class Meta:
         model = Tournament
         fields = '__all__'
 
-
-
-class MatchSerializer(serializers.ModelSerializer):
+# это список api/v1/matches/list/
+class MatchViewSerializer(serializers.ModelSerializer):
     sport_type = SportTypeSerializer()
     tournament = TournamentSerializer()
     team_one = TeamSerializator()
     team_two = TeamSerializator()
+    gender = serializers.CharField(source='get_gender_display', read_only=True)
     date = serializers.DateField(format='%Y.%m.%d', default=None)
     time = serializers.TimeField(format='%H:%M')
-    def create(self, validated_data):
-        # Если дата не указана в запросе, то устанавливаем ее по умолчанию
-        if validated_data.get('date') is None:
-            validated_data['date'] = self.instance.date
-        return super().create(validated_data)
+
+    class Meta:
+        model = Match
+        fields = '__all__'
+
+# для админки
+class MatchSerializer(serializers.ModelSerializer):
+    gender = serializers.CharField(source='get_gender_display', read_only=True)
+    date = serializers.DateField(format='%Y.%m.%d', default=None)
+    time = serializers.TimeField(format='%H:%M')
 
 
     class Meta:
         model = Match
         fields = '__all__'
+
+
