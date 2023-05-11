@@ -1,6 +1,7 @@
 from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAdminUser
 
+from .permissions import IsEditor
 from .models import Article
 from .serializers import ArticleSerializer
 
@@ -13,4 +14,4 @@ class ArticleList(generics.ListAPIView):
 class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
-    permission_classes = (IsAdminUser, )
+    permission_classes = (IsAdminUser, IsEditor, )

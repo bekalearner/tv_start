@@ -7,14 +7,20 @@ class SportType(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "Спорт"
+        verbose_name_plural = "Спорт"
 
 class Team(models.Model):
     name = models.CharField(max_length=100)
     country = models.CharField(max_length=100, blank=True)
     logo = models.URLField(blank=True)
-    # sport_type = models.ForeignKey(SportType, on_delete=models.CASCADE, related_name='sport_type')
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = "Команда"
+        verbose_name_plural = "Команды"
 
 class Tournament(models.Model):
     sport_type = models.ForeignKey(SportType, on_delete=models.CASCADE, blank=True)
@@ -27,6 +33,10 @@ class Tournament(models.Model):
     def __str__(self):
         return f"{self.sport_type}   {self.name}   {self.gender}"
 
+    class Meta:
+        verbose_name = "Турнир"
+        verbose_name_plural = "Турниры"
+
 class Match(models.Model):
     url = models.URLField(blank=True)
     date = models.DateField(null=True)
@@ -38,3 +48,7 @@ class Match(models.Model):
 
     def __str__(self):
         return f"{self.team_one} vs {self.team_two}"
+
+    class Meta:
+        verbose_name = "Матч"
+        verbose_name_plural = "Матчи"
