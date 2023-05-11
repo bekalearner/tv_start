@@ -12,7 +12,7 @@ class FeedbackView(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            send_feedback_email(serializer.data)
+            # send_feedback_email(serializer.data)
             return Response(serializer.data, status=201)
         else:
             return Response(serializer.errors, status=400)
