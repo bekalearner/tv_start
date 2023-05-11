@@ -5,7 +5,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'header_img': "url('/public/img/bg-top-23_2.jpg')"
+        'header_img': "url('/public/img/common/bg-top-23_2.jpg')",
+        'bg_nav': "url('/public/img/common/bg_nav.jpg')",
+        'footer_img': "url('/public/img/common/bg-footer.jpg')"
       }
     },
     screens: {
