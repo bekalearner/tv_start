@@ -22,6 +22,7 @@ from nard.views import BackgammonList, BackgammonViewSet
 from sport_matches.views import *
 from title.views import *
 
+# from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
@@ -54,7 +55,7 @@ urlpatterns = [
 
     path('api/v1/auth/', include('rest_framework.urls')),
 
-    path('', views.index)
+    # path('', views.index)
 ]
 
 if settings.DEBUG:
