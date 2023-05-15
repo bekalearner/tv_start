@@ -1,14 +1,10 @@
-# from django.shortcuts import render
-import requests
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, generics
-from rest_framework.permissions import IsAdminUser, IsAuthenticatedOrReadOnly
-
+from django_filters import rest_framework as rest_filters
+from rest_framework import viewsets, generics, filters
 from sport_matches.filters import MatchFilter
-from sport_matches.models import *
 from sport_matches.serializers import *
 from .permissions import IsEditor
-from rest_framework.response import Response
+
+
 class SportTypeViewSet(viewsets.ModelViewSet):
     queryset = SportType.objects.all()
     serializer_class = SportTypeSerializer
@@ -18,13 +14,17 @@ class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
     permission_classes = (IsEditor, )
-    filter_backends = (DjangoFilterBackend,)
+    filter_backends = (rest_filters.DjangoFilterBackend, filters.SearchFilter)
     filterset_class = MatchFilter
+    search_fields = ('sport_type__name', 'tournament__name', 'team_one__name', 'team_two__name',)
+
 
 class MatchList(generics.ListAPIView):
-    queryset = Match.objects.all()
+    queryset = Match.objects.all().order_by('-created_date')
     serializer_class = MatchViewSerializer
-    filter_backends = (DjangoFilterBackend,)
+    filter_backends = (rest_filters.DjangoFilterBackend, filters.SearchFilter)
     filterset_class = MatchFilter
+    search_fields = ('sport_type__name', 'tournament__name', 'team_one__name', 'team_two__name',)
+
     def perform_create(self, serializer):
         serializer.save(editor=self.request.user)
