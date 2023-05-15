@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'profiles_app.apps.ProfilesAppConfig',
     'feedback.apps.FeedbackConfig',
     'sport_matches.apps.SportMatchesConfig',
-    'nard.apps.NardConfig',
+    # 'nard.apps.NardConfig',
 ]
 
 MIDDLEWARE = [
