@@ -7,12 +7,16 @@ defusedxml==0.7.1
 Django==4.2
 django-cors-headers==3.14.0
 django-filter==23.1
+django-modeltranslation==0.18.9
+django-pagination==1.0.7
+django-paginator==0.2a3
 django-templated-mail==1.1.1
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
 djoser==2.2.0
 idna==3.4
 oauthlib==3.2.2
+Pillow==9.5.0
 psycopg2-binary==2.9.6
 pycparser==2.21
 PyJWT==2.6.0
@@ -24,4 +28,5 @@ requests-oauthlib==1.3.1
 social-auth-app-django==5.2.0
 social-auth-core==4.4.2
 sqlparse==0.4.4
+typing_extensions==4.5.0
 urllib3==1.26.15
