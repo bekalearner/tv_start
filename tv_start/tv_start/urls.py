@@ -22,7 +22,6 @@ from nard.views import BackgammonList, BackgammonViewSet
 from sport_matches.views import *
 from title.views import *
 
-from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
