@@ -15,11 +15,11 @@ class SportTypeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-
 class TournamentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tournament
         fields = '__all__'
+
 
 # это список api/v1/matches/list/
 class MatchViewSerializer(serializers.ModelSerializer):
@@ -28,22 +28,16 @@ class MatchViewSerializer(serializers.ModelSerializer):
     team_one = TeamSerializator()
     team_two = TeamSerializator()
     gender = serializers.CharField(source='get_gender_display', read_only=True)
-    date = serializers.DateField(format='%Y.%m.%d', default=None)
-    time = serializers.TimeField(format='%H:%M')
+    match_date = serializers.DateField(default=None)
 
     class Meta:
         model = Match
         fields = '__all__'
+
 
 # для админки
 class MatchSerializer(serializers.ModelSerializer):
-    gender = serializers.CharField(source='get_gender_display', read_only=True)
-    date = serializers.DateField(format='%Y.%m.%d', default=None)
-    time = serializers.TimeField(format='%H:%M')
-
-
+    match_date = serializers.DateField(default=None)
     class Meta:
         model = Match
         fields = '__all__'
-
-

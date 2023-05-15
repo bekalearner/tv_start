@@ -39,8 +39,10 @@ class Tournament(models.Model):
 
 class Match(models.Model):
     url = models.URLField(blank=True)
-    date = models.DateField(null=True)
+    created_date = models.DateField(auto_now_add=True, null=True)
+    match_date = models.DateField(null=True)
     time = models.TimeField(null=True)
+    image = models.ImageField(upload_to='match_images/')
     tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE)
     team_one = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team_one',blank=False)
     team_two = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team_two',blank=False)

@@ -3,14 +3,18 @@ from sport_matches.models import *
 from django import forms
 import calendar
 import locale
-from datetime import datetime
+
+
 # установка локали
 locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
+
+
 def get_years():
     """ Возвращает список годов с пустым полем """
     years = [(year, year) for year in range(2015, 2025)]
     years.insert(0, ('', '--------'))
     return years
+
 
 def get_months():
     """ Возвращает список месяцев на русском языке с пустым полем """
@@ -30,4 +34,3 @@ class MatchFilter(django_filters.FilterSet):
     class Meta:
         model = Match
         fields = ['year', 'month', 'sport_type']
-
