@@ -13,14 +13,4 @@ class MatchAdmin(admin.ModelAdmin):
     get_image.short_description = "Изображение"
 
 
-@admin.register(SportType)
-class BackgammoniconAdmin(admin.ModelAdmin):
-    list_display = ('name', 'get_image')
-
-    def get_image(self, obj):
-        return mark_safe(f'<img src={obj.image.url} width="60" height="50"/>')
-
-    get_image.short_description = "Изображение"
-
-
 admin.site.register(Tournament)

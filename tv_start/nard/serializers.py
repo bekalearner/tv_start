@@ -8,14 +8,7 @@ class TournamentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class SportTypeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SportType
-        fields = '__all__'
-
-
 class BackgammonSerializer(serializers.ModelSerializer):
-    sport_type = SportTypeSerializer()
     tournament = TournamentSerializer()
     
     class Meta:
