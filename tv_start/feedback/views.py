@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
 from rest_framework import generics
 from rest_framework.response import Response
-from .models import Feedback
 from .serializers import FeedbackSerializer
 from .utils import send_feedback_email
 
@@ -13,6 +12,6 @@ class FeedbackView(generics.CreateAPIView):
         if serializer.is_valid():
             serializer.save()
             # send_feedback_email(serializer.data)
-            return Response(serializer.data, status=201)
+            return redirect(request.META['HTTP_REFERER']) # Отправляем пользователя обратно на предыдущую страницу
         else:
             return Response(serializer.errors, status=400)

@@ -25,12 +25,12 @@ class Tournament(models.Model):
 
 
 class Backgammon(models.Model):
-    name = models.CharField(null=True, blank=True)
+    name = models.CharField()
     url = models.URLField(blank=True)
     created_date = models.DateField(auto_now_add=True)
     match_date = models.DateField()
     time = models.TimeField()
-    image = models.ImageField(upload_to='nard_images/')
+    image = models.ImageField(upload_to='nard_images/', null=True, default='nard_images/nardy-youtube-13_03_23-600x350.jpg')
     tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE)
     sport_type = models.ForeignKey(SportType, on_delete=models.CASCADE, default=True)
 
