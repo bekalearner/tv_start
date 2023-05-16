@@ -11,7 +11,7 @@ class ArticleList(generics.ListAPIView):
     serializer_class = ArticleSerializer
 
     def get_queryset(self):
-        queryset = Article.objects.filter(post_date__isnull=False).order_by('post_date')
+        queryset = Article.objects.filter(post_date__isnull=False).order_by('post_date', 'time')
 
         # Получаем значение GET-параметра 'day_of_week'
         day_of_week = self.request.GET.get('day_of_week')
