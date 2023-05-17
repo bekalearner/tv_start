@@ -2,8 +2,8 @@ from django_filters import rest_framework as rest_filters
 from rest_framework import viewsets, generics, filters
 from sport_matches.filters import MatchFilter
 from sport_matches.serializers import *
-from .permissions import IsEditor
-
+from tv_start.permissions import IsEditor
+from rest_framework.permissions import IsAdminUser
 
 class SportTypeViewSet(viewsets.ModelViewSet):
     queryset = SportType.objects.all()

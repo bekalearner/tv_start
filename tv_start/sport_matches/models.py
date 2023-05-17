@@ -2,7 +2,7 @@ from django.db import models
 
 class SportType(models.Model):
     name = models.CharField(max_length=100)
-    logo = models.ImageField(blank=True)
+    logo = models.ImageField(upload_to='sport_type_logo/')
 
     def __str__(self):
         return self.name
@@ -14,7 +14,7 @@ class SportType(models.Model):
 class Team(models.Model):
     name = models.CharField(max_length=100)
     country = models.CharField(max_length=100, blank=True)
-    logo = models.ImageField(blank=True)
+    logo = models.ImageField(upload_to='team_logo/')
     def __str__(self):
         return self.name
 
@@ -43,6 +43,7 @@ class Match(models.Model):
     match_date = models.DateField(null=True)
     time = models.TimeField(null=True)
     image = models.ImageField(upload_to='match_images/')
+    youtube_video_url = models.URLField(blank=True)
     tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE)
     team_one = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team_one',blank=False)
     team_two = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='team_two',blank=False)

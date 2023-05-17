@@ -1,10 +1,9 @@
 from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAdminUser
 
-from .permissions import IsEditor
+from tv_start.permissions import IsEditor
 from .models import Article
 from .serializers import ArticleSerializer
-
 from datetime import datetime, timedelta
 
 class ArticleList(generics.ListAPIView):
@@ -34,6 +33,10 @@ class ArticleList(generics.ListAPIView):
 
 
 class ArticleViewSet(viewsets.ModelViewSet):
-    queryset = Article.objects.all().order_by('-date')
+    queryset = Article.objects.all().order_by('-date', '-time')
     serializer_class = ArticleSerializer
-    permission_classes = (IsAdminUser, IsEditor, )
+    permission_classes = (IsEditor,)
+
+
+
+
