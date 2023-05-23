@@ -26,9 +26,9 @@ def get_months():
 class MatchFilter(django_filters.FilterSet):
     sport_type = django_filters.ModelChoiceFilter(queryset=SportType.objects.all())
     tournament = django_filters.ModelChoiceFilter(queryset=Tournament.objects.all())
-    year = django_filters.NumberFilter(field_name='date', lookup_expr='year',
+    year = django_filters.NumberFilter(field_name='match_date', lookup_expr='year',
                                        widget=forms.Select(choices=get_years()))
-    month = django_filters.NumberFilter(field_name='date', lookup_expr='month',
+    month = django_filters.NumberFilter(field_name='match_date', lookup_expr='month',
                                         widget=forms.Select(choices=get_months()))
 
     class Meta:

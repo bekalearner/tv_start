@@ -2,7 +2,7 @@ from django_filters import rest_framework as rest_filters
 from rest_framework import viewsets, generics, filters
 from sport_matches.filters import MatchFilter
 from sport_matches.serializers import *
-from tv_start.permissions import IsEditor
+from tv_start.permissions import *
 from rest_framework.permissions import IsAdminUser
 
 class SportTypeViewSet(viewsets.ModelViewSet):
@@ -13,7 +13,7 @@ class SportTypeViewSet(viewsets.ModelViewSet):
 class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
-    permission_classes = (IsEditor, )
+    permission_classes = (Editor, )
     filter_backends = (rest_filters.DjangoFilterBackend, filters.SearchFilter)
     filterset_class = MatchFilter
     search_fields = ('sport_type__name', 'tournament__name', 'team_one__name', 'team_two__name',)

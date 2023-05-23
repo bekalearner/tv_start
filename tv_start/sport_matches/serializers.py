@@ -15,7 +15,7 @@ class SportTypeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class TournamentSerializer(serializers.ModelSerializer):
+class SportTournamentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tournament
         fields = '__all__'
@@ -24,7 +24,7 @@ class TournamentSerializer(serializers.ModelSerializer):
 # это список api/v1/matches/list/
 class MatchViewSerializer(serializers.ModelSerializer):
     sport_type = SportTypeSerializer()
-    tournament = TournamentSerializer()
+    tournament = SportTournamentSerializer()
     team_one = TeamSerializator()
     team_two = TeamSerializator()
     gender = serializers.CharField(source='get_gender_display', read_only=True)
