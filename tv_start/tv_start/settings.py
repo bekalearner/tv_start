@@ -33,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
-# Application definition
+# Application definition asd
 
 INSTALLED_APPS = [
     'modeltranslation',
