@@ -29,7 +29,7 @@ from drf_yasg.views import get_schema_view
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
+
 router = routers.DefaultRouter()
 router.register(r'details', ArticleViewSet)
 
