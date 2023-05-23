@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TV-start | ТВ-старт</title>
   <link rel="stylesheet" href="./dist/output.css">
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./public/css/main.css">
 </head>
 <body>
   <header class="w-full h-auto bg-header_img">
@@ -23,13 +23,13 @@
           sm:block
           sm:w-[150px]
           sm:bg-black">
-          <li class="lg:w-auto sm:my-4"><a href="./ru/lists/schedule.html" class="text-white hover:text-[#b3b3b3] text-center">Программа</a></li>
-          <li class="lg:w-[80px] text-center sm:my-4"><a href="./ru/lists/live.html" class="text-white hover:text-[#b3b3b3]">Прямые трансляции</a></li>
-          <li class="lg:w-auto sm:my-4"><a href="./ru/lists/live.html" class="text-white hover:text-[#b3b3b3]">Календарь</a></li>
-          <li class="lg:w-auto sm:my-4"><a href="./ru/pages/services.html" class="text-white hover:text-[#b3b3b3]">Услуги</a></li>
-          <li class="lg:w-auto sm:my-4"><a href="./ru/pages/broadcast.html" class="text-white hover:text-[#b3b3b3]">Вещание</a></li>
-          <li class="lg:w-[80px] text-center sm:my-4"><a href="./ru/pages/topartners.html" class="text-white hover:text-[#b3b3b3]" >Кабельным  операторам</a></li>
-          <li class="lg:w-auto sm:my-4"><a href="./ru/pages/contacts.html" class="text-white hover:text-[#b3b3b3]">Контакты</a></li>
+          <li class="lg:w-auto sm:my-4"><a href="./ru/schedule.html" class="text-white hover:text-[#b3b3b3] text-center">Программа</a></li>
+          <li class="lg:w-[80px] text-center sm:my-4"><a href="./ru/live.html" class="text-white hover:text-[#b3b3b3]">Прямые трансляции</a></li>
+          <li class="lg:w-auto sm:my-4"><a href="./ru/live.html" class="text-white hover:text-[#b3b3b3]">Календарь</a></li>
+          <li class="lg:w-auto sm:my-4"><a href="./ru/services.html" class="text-white hover:text-[#b3b3b3]">Услуги</a></li>
+          <li class="lg:w-auto sm:my-4"><a href="./ru/broadcast.html" class="text-white hover:text-[#b3b3b3]">Вещание</a></li>
+          <li class="lg:w-[80px] text-center sm:my-4"><a href="./ru/topartners.html" class="text-white hover:text-[#b3b3b3]" >Кабельным  операторам</a></li>
+          <li class="lg:w-auto sm:my-4"><a href="./ru/contacts.html" class="text-white hover:text-[#b3b3b3]">Контакты</a></li>
         </ul>
         <div class="w-[20px] h-[20px] bg-blue-600"></div>
         <button class="border-none">
@@ -121,30 +121,14 @@
   <!-- КАРТОЧКИ -->
   <section class="w-[1100px] lg:w-[900px] sx:w-[800px] sm:w-[360px] min-h-[90vh] mx-auto lg:px-[10px]">
     <h1 class="font-medium pt-[30px] pb-[20px] text-[24px] text-[#333333]">Последние трансляции</h1>
-    <div class="container_2  w-full flex flex-wrap gap-6 ">
+    <div id="card_live" class="container_2  w-full flex flex-wrap gap-6 ">
 
+    
 
-
-      <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-        <img class="w-full absolute top-0 left-0" src="./public/img/sport_live.png" alt="">
-        <a class="text-white text-[12px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-        <div class="flex absolute bottom-0 left-0">
-          <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-            <img class="w-[35px]" src="./public/img/sport_type/sport-volley.png" alt="">
-          </span>
-          <span class="leading-[15px]">
-            <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">01.05.2023 / 17:50 MSK</p>
-            <p class="text-[14px] text-[#BABABA] pl-[18px]">Волейбол. Pari Суперлига. Мужчины</p> 
-          </span>
-          <span class="flex items-center justify-center w-[70px] h-[85px]">
-            <img class="w-[35px]" src="./public/img/play.png" alt="">
-          </span>
-        </div>
-      </div>
       
-
-
-      <a class=" m-auto " href="#">
+    </div>
+    <div class="w-full my-8 flex justify-center">
+      <a class=" m-auto " href="./ru/lists/last_live.html">
         <button class="uppercase px-[25px] py-[10px] border border-[#bababa] rounded text-[11px]">смотреть больше</button>
       </a>
     </div>
@@ -159,109 +143,16 @@
         <h1 class=" font-medium pt-[10px] pb-[20px] text-[24px] ">Нарды. СТАРТ Суперлига Сайт турнира</h1>
       </a>
 
-      <div class="container_2  w-full flex flex-wrap gap-6 ">
+      <div id="nards" class="container_2  w-full flex flex-wrap gap-6 ">
 
-        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
-          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-          <div class="flex absolute bottom-0 left-0">
-            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-              <img class="w-[35px]" src="./public/img/kub.png" alt="">
-            </span>
-            <span class="leading-[15px]">
-              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
-              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
-            </span>
-            <span class="flex items-center justify-center w-[70px] h-[85px]">
-              <img class="w-[35px]" src="./public/img/play.png" alt="">
-            </span>
-          </div>
-        </div>
-        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
-          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-          <div class="flex absolute bottom-0 left-0">
-            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-              <img class="w-[35px]" src="./public/img/kub.png" alt="">
-            </span>
-            <span class="leading-[15px]">
-              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
-              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
-            </span>
-            <span class="flex items-center justify-center w-[70px] h-[85px]">
-              <img class="w-[35px]" src="./public/img/play.png" alt="">
-            </span>
-          </div>
-        </div>
-        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
-          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-          <div class="flex absolute bottom-0 left-0">
-            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-              <img class="w-[35px]" src="./public/img/kub.png" alt="">
-            </span>
-            <span class="leading-[15px]">
-              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
-              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
-            </span>
-            <span class="flex items-center justify-center w-[70px] h-[85px]">
-              <img class="w-[35px]" src="./public/img/play.png" alt="">
-            </span>
-          </div>
-        </div>
-        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
-          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-          <div class="flex absolute bottom-0 left-0">
-            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-              <img class="w-[35px]" src="./public/img/kub.png" alt="">
-            </span>
-            <span class="leading-[15px]">
-              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
-              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
-            </span>
-            <span class="flex items-center justify-center w-[70px] h-[85px]">
-              <img class="w-[35px]" src="./public/img/play.png" alt="">
-            </span>
-          </div>
-        </div>
-        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
-          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-          <div class="flex absolute bottom-0 left-0">
-            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-              <img class="w-[35px]" src="./public/img/kub.png" alt="">
-            </span>
-            <span class="leading-[15px]">
-              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
-              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
-            </span>
-            <span class="flex items-center justify-center w-[70px] h-[85px]">
-              <img class="w-[35px]" src="./public/img/play.png" alt="">
-            </span>
-          </div>
-        </div>
-        <div class="border m-auto border-[#ccc] w-[350px] h-[290px] relative">
-          <img class="w-full absolute top-0 left-0" src="./public/img/narda.png" alt="">
-          <a class="text-white text-[14px] font-medium hover:underline absolute bottom-[110px] left-[20px]" href="#">Зенит (Санкт-Петербург) - Локомотив</a>
-          <div class="flex absolute bottom-0 left-0">
-            <span class="flex items-center justify-center w-[70px] h-[85px] border-r border-[#ccc]">
-              <img class="w-[35px]" src="./public/img/kub.png" alt="">
-            </span>
-            <span class="leading-[15px]">
-              <p class="text-[12px] text-[#666] pt-[18px] pl-[18px] ">05.12.2022 / 21:45 MSK</p>
-              <p class="text-[14px] text-[#BABABA] pl-[18px]">Нарды. СТАРТ Суперлига</p> 
-            </span>
-            <span class="flex items-center justify-center w-[70px] h-[85px]">
-              <img class="w-[35px]" src="./public/img/play.png" alt="">
-            </span>
-          </div>
-        </div>
+        
+        
+      </div>
+      <div class="w-full  flex justify-center">
         <a class="m-auto my-8" href="#">
           <button class="uppercase px-[25px] py-[10px] border border-[#bababa] rounded text-[11px]">смотреть больше</button>
         </a>
-
-        </div>
+      </div>
   </section>
 
   
@@ -272,7 +163,18 @@
     <a class="hover:underline text-[#337ab7]" href="#">
       <h1 class=" font-medium pt-[10px] pb-[20px] text-[24px] ">Программа Телеканала «СТАРТ Триумф»</h1>
     </a>
-    <h2 class="text-2xl my-[30px] font-semibold">Программа Телеканала «СТАРТ»</h2>
+    <div class="flex justify-between items-center">
+      <h2 class="text-2xl my-[30px] font-semibold">Программа Телеканала «СТАРТ»</h2>
+      <ul class="uppercase flex gap-4 text-red-500">
+        <span class="cursor-pointer" id="first" data-number="0">пн</span>
+        <span class="cursor-pointer" id="second" data-number="http://127.0.0.1:8000/api/v1/article/list/?page=1&day_of_week=1">вт</span>
+        <span class="cursor-pointer" id="third" data-number="http://127.0.0.1:8000/api/v1/article/list/?page=1&day_of_week=2">ср</span> 
+        <span class="cursor-pointer" id="fourth" data-number="http://127.0.0.1:8000/api/v1/article/list/?page=1&day_of_week=3">чт</span> 
+        <span class="cursor-pointer" id="fifth" data-number="http://127.0.0.1:8000/api/v1/article/list/?page=1&day_of_week=4">пт</span> 
+        <span class="cursor-pointer" id="sixth" data-number="http://127.0.0.1:8000/api/v1/article/list/?page=1&day_of_week=5">сб</span> 
+        <span class="cursor-pointer" id="seventh" data-number="http://127.0.0.1:8000/api/v1/article/list/?page=1&day_of_week=6">вс</span> 
+      </ul> 
+    </div>
     <div class="news">
 
       
@@ -298,6 +200,7 @@
         </div>
         <div class="mt-[15px] ml-[20px] ms:m-auto w-[260px]">
           <form action="http://127.0.0.1:8000/api/v1/feedback/" method="post" class=" w-[260px]">
+            {{csrf}}
             <input class="w-[255px] h-[45px] px-[12px] py-[6px] mt-[5px] rounded-sm" type="text" placeholder="Мероприятие" name="name" id="event">
             <input class="w-[255px] h-[45px] px-[12px] py-[6px] mt-[5px] rounded-sm" type="text" placeholder="Контактное лицо" name="message" id="contact">
             <input class="w-[255px] h-[45px] px-[12px] py-[6px] mt-[5px] rounded-sm" type="text" placeholder="Телефон" name="phone" id="phone">
@@ -342,6 +245,7 @@
   </footer>
 
   <!-- lg:w-[900px] sx:w-[800px] sm:w-[360px] -->
-  <script src="./script.js"></script>
+  <script src="public/js/script.js"></script>
+  <script src="./public/js/api.js"></script>
 </body>
 </html>

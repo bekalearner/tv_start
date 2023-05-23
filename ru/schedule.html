@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TV-start | ТВ-старт</title>
   <link rel="stylesheet" href="../../dist/output.css">
-  <link rel="stylesheet" href="../../main.css">
+  <link rel="stylesheet" href="../../public/css/main.css">
 </head>
 <body>
   <header class="w-full h-auto bg-bg_nav">
@@ -17,13 +17,13 @@
 
         <!-- NAV -->
         <ul id="navbar-default" class="flex items-center gap-[25px] lg:gap-[10px] lg:text-[14px] lg:mx-[10px] sm:hidden">
-          <li class="lg:w-auto"><a href="schedule.html" class="text-white hover:text-[#b3b3b3]">Программа</a></li>
-          <li class="lg:w-[80px] text-center"><a href="live.html" class="text-white hover:text-[#b3b3b3]">Прямые трансляции</a></li>
-          <li class="lg:w-auto"><a href="calendar.html" class="text-white hover:text-[#b3b3b3]">Календарь</a></li>
-          <li class="lg:w-auto"><a href="../pages/services.html" class="text-white hover:text-[#b3b3b3]">Услуги</a></li>
-          <li class="lg:w-auto"><a href="../pages/broadcast.html" class="text-white hover:text-[#b3b3b3]">Вещание</a></li>
-          <li class="lg:w-[80px] text-center"><a href="../pages/topartners.html" class="text-white hover:text-[#b3b3b3]" >Кабельным  операторам</a></li>
-          <li class="lg:w-auto"><a href="../pages/contacts.html" class="text-white hover:text-[#b3b3b3]">Контакты</a></li>
+          <li class="lg:w-auto"><a href="./schedule.html" class="text-white hover:text-[#b3b3b3]">Программа</a></li>
+          <li class="lg:w-[80px] text-center"><a href="./live.html" class="text-white hover:text-[#b3b3b3]">Прямые трансляции</a></li>
+          <li class="lg:w-auto"><a href="./calendar.html" class="text-white hover:text-[#b3b3b3]">Календарь</a></li>
+          <li class="lg:w-auto"><a href="./services.html" class="text-white hover:text-[#b3b3b3]">Услуги</a></li>
+          <li class="lg:w-auto"><a href="./broadcast.html" class="text-white hover:text-[#b3b3b3]">Вещание</a></li>
+          <li class="lg:w-[80px] text-center"><a href="./topartners.html" class="text-white hover:text-[#b3b3b3]" >Кабельным  операторам</a></li>
+          <li class="lg:w-auto"><a href="./contacts.html" class="text-white hover:text-[#b3b3b3]">Контакты</a></li>
         </ul>
         <div class="w-[20px] h-[20px] bg-blue-600"></div>
         <button class="border-none">
@@ -78,47 +78,25 @@
     </div>
   </header>
 
-  <section class="w-full max-h-[700px] bg-[#ededed7e] lg:px-[10px]">
-    <div class="max-w-[1100px] max-h-[800px] m-auto pb-6">
-      <h1 class="font-medium pt-[30px] pb-[20px] text-[24px] text-[#333333]">Прямые трансляции</h1>
-      <div class="container max-h-[500px] overflow-y-auto">
-        <div class="w-full h-[80px] bg-white flex border border-[#ddd] ">
-          <div class="flex items-center justify-center w-[60px] h-[100%] border-r border-[#ddd] ">
-            <img class="w-[30px]" src="../../public/img/sport_type/sport-volley.png" alt="">
-          </div>
-          <div class="w-full flex ms:block">
-            <div class="w-[15%] h-[100%] flex items-center text-[12px] font-normal text-[#666] pl-2 lg:block ms:w-full ms:h-[28px] ms:flex ms:justify-center">
-              <p class="lg:mt-[19px] ms:mt-0">01.05.2023 / </p>
-              <p > 16:50 MSK</p>
-            </div>
-            <div class="block w-full">
-              <div class="grid_kiro w-full flex items-center">
-                <div class="flex items-center justify-end font-[600]">
-                  <p>Зенит-Казань</p>
-                </div>
-                <div class="flex items-center justify-center ms:hidden">
-                  <img class="w-[40px]" src="../../public/img/teams/VC-Sparta.png" alt="">
-                </div>
-                <div class="flex items-center justify-center font-semibold ">
-                  <p>--</p>
-                </div>
-                <div class="flex items-center justify-center ms:hidden">
-                  <img class="w-[40px]" src="../../public/img/teams/Zarechie.png" alt="">
-                </div>
-                <div class="flex items-center  font-[600]">
-                  <p>Динамо (Москва)</p>
-                </div>
-              </div>
-              <div class="w-full  ms:hidden">
-                <p class="text-center text-[0.8em] font-normal text-[#BABABA]">Волейбол. Pari Суперлига. Мужчины</p>
-              </div>
-            </div>
-          </div>
-          <div class="flex justify-center items-center w-[60px] h-[100%] border-l border-[#ddd]">
-            <img class="w-[30px]" src="../../public/img/play.png" alt="">
-          </div>
-        </div>
+  
+  <section class="w-[1100px] lg:w-[900px] sx:w-[800px] sm:w-[360px] min-h-[90vh] mx-auto lg:px-[10px]">
+    <a class="hover:underline text-[#337ab7]" href="#">
+      <h1 class=" font-medium pt-[10px] pb-[20px] text-[24px] ">Программа Телеканала «СТАРТ Триумф»</h1>
+    </a>
+    <h2 class="text-2xl my-[30px] font-semibold">Программа Телеканала «СТАРТ»</h2>
+    <div class="news ">
+
+      <div class="flex p-2 font-normal text-[1.5em] items-center news_item ">
+        <span>
+          <p class="font-normal text-[20px]">06:00</p>
+          <p class="text-[#BABABA] text-[14px]">MSK</p>
+        </span>
+        <span class="flex items-center pl-4">
+          <p class="text-[15px]"> <span class="text-[#ff1313] font-semibold"> Прямой Эфир</span> Волейбол. PARI Суперлига 22/23. Плей-офф. Полуфинал. Мужчины. Динамо Москва — Зенит СПб</p>
+        </span>
       </div>
+      
+      
     </div>
   </section>
   
@@ -182,7 +160,6 @@
     </section>
   </footer>
 
-  <!-- lg:w-[900px] sx:w-[800px] sm:w-[360px] -->
-  <script src="./script.js"></script>
+  <script src="../public/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../dist/output.css">
+  <link rel="stylesheet" href="../../main.css">
+</head>
+<body>
+  <header class="w-full h-auto bg-bg_nav">
+    <!-- NAVIGATION -->
+    <div class="navigation  flex justify-between items-center max-w-[1100px] h-[100px] m-auto pt-[30px] lg:px-[10px]">
+        <!-- LOGO -->
+        <img class="w-[138px] " src="../../public/img/logo-mainn-ru.png" alt="">
+
+        <!-- NAV -->
+        <ul id="navbar-default" class="flex items-center gap-[25px] lg:gap-[10px] lg:text-[14px] lg:mx-[10px] sm:hidden">
+          <li class="lg:w-auto"><a href="./schedule.html" class="text-white hover:text-[#b3b3b3]">Программа</a></li>
+          <li class="lg:w-[80px] text-center"><a href="./live.html" class="text-white hover:text-[#b3b3b3]">Прямые трансляции</a></li>
+          <li class="lg:w-auto"><a href="./calendar.html" class="text-white hover:text-[#b3b3b3]">Календарь</a></li>
+          <li class="lg:w-auto"><a href="./services.html" class="text-white hover:text-[#b3b3b3]">Услуги</a></li>
+          <li class="lg:w-auto"><a href="./broadcast.html" class="text-white hover:text-[#b3b3b3]">Вещание</a></li>
+          <li class="lg:w-[80px] text-center"><a href="./topartners.html" class="text-white hover:text-[#b3b3b3]" >Кабельным  операторам</a></li>
+          <li class="lg:w-auto"><a href="./contacts.html" class="text-white hover:text-[#b3b3b3]">Контакты</a></li>
+        </ul>
+        <div class="w-[20px] h-[20px] bg-blue-600"></div>
+        <button class="border-none">
+          <img class="w-8 rounded-[50%]" src="../../public/img/profile.png" alt="">
+        </button>
+
+        <!-- BURGER MENU -->
+        <button id="burger" data-collapse-toggle="navbar-default" class="group  hidden relative sm:block h-5 w-[30px]">
+          <span class="absolute bg-white top-0 left-0 h-[1px] w-full transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"></span>
+          <span class="absolute bg-white top-1/2 left-0 h-[0.5px] w-full transition-opacity group-[.active]:opacity-0"></span>
+          <span class="absolute bg-white bottom-0 left-0 h-[1px] w-full transition-transform group-[.active]:-translate-y-[11px] group-[.active]:-rotate-45"></span>
+        </button>
+
+    </div>
+    
+
+    <!-- SOCIAL NETWORK -->
+    <div class="max-w-[1100px] h-[50px] m-auto flex justify-between items-center lg:px-[10px] xs:flex-col xs:gap-3">
+      <div class="flex gap-[10px]">
+        <a href="https://vk.com/tvstartru" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-vk.png" alt="">
+        </a>
+        <a href="https://rutube.ru/channel/24624806/" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-rtu.png" alt="">
+        </a>
+        <a href="https://zen.yandex.ru/id/614d8bb8f0c0c85a05a4c3e4" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-zen.png" alt="">
+        </a>
+        <a href="https://ok.ru/tvstart" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-ok.png" alt="">
+        </a>
+        <a href="https://ok.ru/tvstart" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-tg.png" alt="">
+        </a>
+        <a href="https://www.youtube.com/c/TVSTARTLIVE" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-yt.png" alt="">
+        </a>
+        <a href="https://www.tiktok.com/@tvstartru" target="_blank">
+          <img class="w-8" src="../../public/img/soc_net/i-soc-tt.png" alt="">
+        </a>
+      </div>
+      <input class="search w-[100px] h-[30px]" type="text" placeholder="Поиск" name="" id="">
+    </div>
+  </header>
+  <script src="../public/js/script.js"></script>
+</body>
+</html>
