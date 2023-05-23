@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from rest_framework import routers
 from feedback.views import FeedbackView
-from infos.views import get_all_site_info
+# from infos.views import get_all_site_info
 from nard.views import BackgammonList, BackgammonViewSet
 from sport_matches.views import *
 from title.views import *
