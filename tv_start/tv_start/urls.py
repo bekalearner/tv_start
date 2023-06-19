@@ -18,15 +18,15 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from rest_framework import routers
 from feedback.views import FeedbackView
-# from infos.views import get_all_site_info
 from nard.views import BackgammonList, BackgammonViewSet
 from sport_matches.views import *
 from title.views import *
+from infos.views import *
+from services.views import *
 
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
-# from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -68,11 +68,11 @@ urlpatterns = [
     path('api/v1/backgammon/', include(router3.urls)),
     path('api/v1/backgammon/list/', BackgammonList.as_view()),
 
-    # path('site-info/', , name='get_all_site_info'),
+    path('api/v1/infos/', InfoView.as_view()),
+    path('api/v1/services/', ServicesView.as_view()),
 
     # path('api/v1/auth/', include('rest_framework.urls')),
 
-    # path('', views.index),
 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
