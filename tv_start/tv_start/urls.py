@@ -71,6 +71,8 @@ urlpatterns = [
     path('api/v1/infos/', InfoView.as_view()),
     path('api/v1/services/', ServicesView.as_view()),
 
+
+
     # path('api/v1/auth/', include('rest_framework.urls')),
 
 

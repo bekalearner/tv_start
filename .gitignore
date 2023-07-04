@@ -2,3 +2,4 @@ node_modules
 tv_start/.env
 __pycache__/
 tv_start/env
+venv
